@@ -1,0 +1,14 @@
+### Consulta de productos
+GET http://proycompu266/productos
+
+### Modificar Productos
+
+PUT http://proycompu266/productos/1
+
+{
+    "id":1,
+    "codBarras":"7501001300326",
+    "descripcion":"Mouse Óptico Inalámbrico Logitech",
+    "stock":50,
+    "precio_unitario":22.50
+}
