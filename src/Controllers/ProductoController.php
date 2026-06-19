@@ -43,7 +43,7 @@ class ProductoController{
             ]);
             return;
     }
-    // "stock":50,
+
       if(!isset($data['stock']) || trim($data['stock'])=="")
     {
         echo json_encode(
