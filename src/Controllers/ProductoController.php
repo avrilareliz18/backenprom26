@@ -43,7 +43,7 @@ class ProductoController{
             ]);
             return;
     }
-
+    // "stock":50,
       if(!isset($data['stock']) || trim($data['stock'])=="")
     {
         echo json_encode(
@@ -66,19 +66,47 @@ class ProductoController{
             ]);
             return;
     }
-
-
         $producto=Productos::update($id,$data);
+        if($producto){
+            echo json_encode([
+                "estado"=>true,
+                "message" => "Producto actualizado correctamente",
+            ]);
+            return;
+        }
         echo json_encode($producto);
          
     }
+
+
     //Adicionar Producto
-    //public function add()
-    //{
-       // $jsonData=file_get_contents('php://input');
-        //die($jsonData);
-        //$producto=Productos::update($id);
-        //echo json_encode($producto);
-         
-   // }
+    public function add()
+    {
+    $jsonData=file_get_contents('php://input');
+    $data = json_descode($jsonData, true);
+    //validacion
+     $producto=Productos::update($id);
+    if($producto){
+            echo json_encode([
+                "estado"=>true,
+                "message" => "Producto adicionado correctamente",
+            ]);
+            return;
+
+    }
+    echo json_encode($producto);
+ }
+  //construir datos
+        foreach($data as $columna=>$valor)
+        {
+            $campos[]="$columna=:$columna";
+            $valores[":$columna"]= $valor;
+        }
+     $stringCampos=implode(",",$campos);
+
+     //preparemos la consulta
+     $sql="INSERT productos ($stringCampos) VALUES ($valores)";
+     //$valores[':id']=$id;
+     //$result = ConexionPDO::execute($sql, $valores,false);
+     return $sql  //$result;
 }

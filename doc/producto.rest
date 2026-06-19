@@ -6,7 +6,7 @@ GET http://proycompu266/productos
 PUT http://proycompu266/productos/1
 
 {
-    "id":1,
+    "id":3,
     "codBarras":"7501001300326",
     "descripcion":"Mouse Óptico Inalámbrico Logitech",
     "stock":50,

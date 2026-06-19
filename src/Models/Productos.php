@@ -26,8 +26,7 @@ class Productos
      //preparemos la consulta
      $sql="UPDATE productos SET $stringCampos WHERE id=:id";
      $valores[':id']=$id;
-     //$result=ConexionPDO::();
-     //$sql= "SELECT * FROM productos";
-        return $sql; //ConexionPDO::query($sql);
+     $result = ConexionPDO::execute($sql, $valores,false);
+     return $result;
     }
 }
