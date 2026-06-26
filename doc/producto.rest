@@ -13,6 +13,19 @@ PUT http://proycompu266/productos/1
     "precio_unitario":22.50
 }
 
+### Adicionar producto con varios errores
+POST http://proycompu266/productos
+
+{
+    "codBarras":"",
+    "descripcion":"",
+    "stock":-1,
+    "precio_unitario":0
+}
+
+### Eliminar producto
+DELETE http://proycompu266/productos/20
+
 ### Adicionar producto
 POST http://proycompu266/productos
 
