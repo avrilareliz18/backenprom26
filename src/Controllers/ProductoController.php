@@ -82,13 +82,13 @@ class ProductoController{
     //Adicionar Producto
     public function add()
     {
-    $jsonData=file_get_contents('php://input');
-    $data = json_descode($jsonData, true);
+    $jsonData= file_get_contents('php://input');
+    $data = json_decode($jsonData, true);
     //validacion
-     $producto=Productos::update($id);
-    if($producto){
+     $producto = Productos::add($data);
+    if ($producto) {
             echo json_encode([
-                "estado"=>true,
+                "estado" => true,
                 "message" => "Producto adicionado correctamente",
             ]);
             return;
@@ -96,17 +96,4 @@ class ProductoController{
     }
     echo json_encode($producto);
  }
-  //construir datos
-        foreach($data as $columna=>$valor)
-        {
-            $campos[]="$columna=:$columna";
-            $valores[":$columna"]= $valor;
-        }
-     $stringCampos=implode(",",$campos);
-
-     //preparemos la consulta
-     $sql="INSERT productos ($stringCampos) VALUES ($valores)";
-     //$valores[':id']=$id;
-     //$result = ConexionPDO::execute($sql, $valores,false);
-     return $sql  //$result;
 }
