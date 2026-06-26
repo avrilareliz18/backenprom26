@@ -24,6 +24,7 @@ $route->add('GET','/users','UserController@getAll');
 $route->add('GET','/productos','ProductoController@getAll'); 
 $route->add('POST','/productos','ProductoController@add'); 
 $route->add('PUT','/productos/{id}','ProductoController@update');
+$route->add('DELETE','/productos/{id}','ProductoController@eliminar');
 
 //direccion para clientes
 $route->add('GET','/clientes','ClienteController@getAll'); 
