@@ -12,3 +12,13 @@ PUT http://proycompu266/productos/1
     "stock":50,
     "precio_unitario":22.50
 }
+
+### Adicionar producto
+POST http://proycompu266/productos
+
+{
+    "codBarras":"7501001300329",
+    "descripcion":"Inalámbrico ",
+    "stock":59,
+    "precio_unitario":22.53
+}
