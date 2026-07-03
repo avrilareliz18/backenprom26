@@ -1,2 +1,0 @@
-### Consulta de proveedor_producto
-GET http://proycompu266/proveedor_producto
