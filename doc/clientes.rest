@@ -1,2 +1,0 @@
-### Consulta de cliente
-GET http://proycompu266/clientes
