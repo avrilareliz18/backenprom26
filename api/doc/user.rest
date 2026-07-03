@@ -1,0 +1,2 @@
+### Consulta de usuario
+GET http://proycompu266/users
