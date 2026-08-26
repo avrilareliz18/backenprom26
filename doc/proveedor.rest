@@ -1,0 +1,2 @@
+### Consulta de proveedor
+GET http://api.proycompu266/proveedor

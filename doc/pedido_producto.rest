@@ -1,0 +1,2 @@
+### Consulta de pedido_producto
+GET http://api.proycompu266/pedido_producto
