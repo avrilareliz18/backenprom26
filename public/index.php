@@ -29,7 +29,7 @@ $route->add('DELETE','/productos/{id}','ProductoController@eliminar');
 //direccion para clientes
 $route->add('GET','/clientes','ClienteController@getAll'); 
 
-//direccion para proveedor
+//direccion para proveedor...
 $route->add('GET','/proveedor','ProveedorController@getAll');
 
 //direccion de proveedor_producto
