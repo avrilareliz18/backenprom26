@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta y Compra de Computadoras</title>
+    <link href="./src/styles/output.css" rel="stylesheet">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#inicio">Mi Pagina</a>
+        <nav class="navlinks" aria-label="Menu principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#comprar">Comprar</a>
+            <a href="#vender">Vender</a>
+            <a href="#pago">Pago QR</a>
+        </nav>
+        <a class="login-button" href="#pago">Iniciar</a>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="eyebrow">Computadoras nuevas y usadas</p>
+                <h1>Venta y Compra de Computadoras</h1>
+                <p>Encuentra laptops, PCs gamer, equipos de oficina y publica la computadora que deseas vender con su precio y descripcion.</p>
+                <div class="hero-actions">
+                    <a class="primary-button" href="#comprar">Ver computadoras</a>
+                    <a class="secondary-button" href="#vender">Publicar venta</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="comprar">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Catalogo</p>
+                    <h2>Computadoras en venta</h2>
+                </div>
+                <label class="search-box">
+                    <span>Buscar</span>
+                    <input id="computerSearch" type="search" placeholder="Ej: gamer, oficina, Dell, SSD">
+                </label>
+            </div>
+
+            <div class="computer-grid" id="computerGrid">
+                <button class="computer-card" type="button" data-name="Laptop Lenovo ThinkPad" data-price="Bs 4.200" data-description="Laptop resistente para estudio y trabajo. Intel Core i5, 16GB RAM, SSD 512GB, pantalla 14 pulgadas. Uso: 1 anio, bateria en buen estado.">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80" alt="Laptop Lenovo ThinkPad">
+                    <div>
+                        <h3>Laptop Lenovo ThinkPad</h3>
+                        <p>Core i5, 16GB RAM, SSD 512GB</p>
+                        <strong>Bs 4.200</strong>
+                    </div>
+                </button>
+
+                <button class="computer-card" type="button" data-name="PC Gamer Ryzen" data-price="Bs 7.900" data-description="Computadora gamer lista para jugar y editar video. Ryzen 5, RTX 3060, 32GB RAM, SSD 1TB, gabinete con ventilacion RGB. Uso: 8 meses.">
+                    <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=900&q=80" alt="PC Gamer Ryzen">
+                    <div>
+                        <h3>PC Gamer Ryzen</h3>
+                        <p>Ryzen 5, RTX 3060, 32GB RAM</p>
+                        <strong>Bs 7.900</strong>
+                    </div>
+                </button>
+
+                <button class="computer-card" type="button" data-name="MacBook Air M1" data-price="Bs 6.500" data-description="Equipo liviano para diseno, clases y oficina. Chip M1, 8GB RAM, SSD 256GB, pantalla Retina, cargador original. Uso: 2 anios, muy cuidado.">
+                    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80" alt="MacBook Air M1">
+                    <div>
+                        <h3>MacBook Air M1</h3>
+                        <p>M1, 8GB RAM, SSD 256GB</p>
+                        <strong>Bs 6.500</strong>
+                    </div>
+                </button>
+
+                <button class="computer-card" type="button" data-name="PC de Oficina HP" data-price="Bs 2.850" data-description="PC completa para oficina o caja de ventas. Intel Core i3, 8GB RAM, SSD 240GB, monitor 20 pulgadas, teclado y mouse incluidos. Uso: 1 anio.">
+                    <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=900&q=80" alt="PC de Oficina HP">
+                    <div>
+                        <h3>PC de Oficina HP</h3>
+                        <p>Core i3, 8GB RAM, monitor incluido</p>
+                        <strong>Bs 2.850</strong>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+        <section class="section alt-section" id="vender">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Publicar</p>
+                    <h2>Vende tu computadora</h2>
+                </div>
+                <p class="section-note">Sube una foto, escribe la descripcion, el tiempo de uso y el precio.</p>
+            </div>
+
+            <form class="sell-form" id="sellForm">
+                <label>
+                    Foto de la computadora
+                    <input type="file" accept="image/*" required>
+                </label>
+                <label>
+                    Titulo de publicacion
+                    <input type="text" placeholder="Ej: Laptop HP Core i7" required>
+                </label>
+                <label>
+                    Precio
+                    <input type="text" placeholder="Ej: Bs 3.800" required>
+                </label>
+                <label>
+                    Tiempo de uso
+                    <input type="text" placeholder="Ej: 10 meses de uso" required>
+                </label>
+                <label class="full-field">
+                    Descripcion
+                    <textarea rows="5" placeholder="Procesador, memoria RAM, disco, estado, accesorios, motivo de venta..." required></textarea>
+                </label>
+                <button class="primary-button full-field" type="submit">Publicar computadora</button>
+                <p class="form-message" id="sellMessage" role="status"></p>
+            </form>
+        </section>
+
+        <section class="section" id="pago">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Compra</p>
+                    <h2>Datos para realizar la compra</h2>
+                </div>
+                <p class="section-note">Completa tus datos y realiza el pago con QR.</p>
+            </div>
+
+            <div class="checkout-layout">
+                <form class="checkout-form" id="checkoutForm">
+                    <label>
+                        Nombre
+                        <input type="text" placeholder="Tu nombre completo" required>
+                    </label>
+                    <label>
+                        Correo electronico
+                        <input type="email" placeholder="correo@ejemplo.com" required>
+                    </label>
+                    <label>
+                        CI
+                        <input type="text" placeholder="Numero de carnet" required>
+                    </label>
+                    <label>
+                        Numero de celular
+                        <input type="tel" placeholder="Ej: 70000000" required>
+                    </label>
+                    <label class="full-field">
+                        Ubicacion
+                        <input type="text" placeholder="Ciudad, zona y direccion" required>
+                    </label>
+                    <button class="primary-button full-field" type="submit">Realizar compra</button>
+                    <p class="form-message" id="checkoutMessage" role="status"></p>
+                </form>
+
+                <aside class="qr-panel" aria-label="Pago QR">
+                    <div class="qr-code">
+                        <span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <h3>Realizar pago en QR</h3>
+                    <p>Escanea el codigo para completar tu compra. Luego presiona realizar compra.</p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <dialog class="computer-modal" id="computerModal">
+        <button class="modal-close" type="button" aria-label="Cerrar informacion">x</button>
+        <p class="eyebrow">Detalle de computadora</p>
+        <h2 id="modalTitle"></h2>
+        <strong id="modalPrice"></strong>
+        <p id="modalDescription"></p>
+        <a class="primary-button" href="#pago">Comprar esta computadora</a>
+    </dialog>
+
+    <script>
+        const searchInput = document.getElementById('computerSearch');
+        const cards = [...document.querySelectorAll('.computer-card')];
+        const modal = document.getElementById('computerModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalPrice = document.getElementById('modalPrice');
+        const modalDescription = document.getElementById('modalDescription');
+
+        searchInput.addEventListener('input', () => {
+            const value = searchInput.value.toLowerCase().trim();
+            cards.forEach((card) => {
+                const text = card.innerText.toLowerCase() + ' ' + card.dataset.description.toLowerCase();
+                card.hidden = !text.includes(value);
+            });
+        });
+
+        cards.forEach((card) => {
+            card.addEventListener('click', () => {
+                modalTitle.textContent = card.dataset.name;
+                modalPrice.textContent = card.dataset.price;
+                modalDescription.textContent = card.dataset.description;
+                modal.showModal();
+            });
+        });
+
+        document.querySelector('.modal-close').addEventListener('click', () => modal.close());
+
+        document.getElementById('sellForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+            document.getElementById('sellMessage').textContent = 'Tu publicacion fue registrada correctamente.';
+            event.currentTarget.reset();
+        });
+
+        document.getElementById('checkoutForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+            document.getElementById('checkoutMessage').textContent = 'Realizado su compra. Gracias por confiar en nosotros.';
+            event.currentTarget.reset();
+        });
+    </script>
+</body>
+</html>
