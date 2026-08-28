@@ -49,10 +49,8 @@ SELECT * FROM pedido;
 SELECT * FROM pedido_producto;
 
 INSERT INTO usuarios (cod_cliente, email, password_hash) VALUES
-(1, 'carlos.mendoza@email.com', '$2y$10$e0myZXy9x...hash_simulado_1'), -- Cliente 1: Carlos
-(2, 'ana.gutierrez@email.com', '$2y$10$e0myZXy9x...hash_simulado_2'),  -- Cliente 2: Ana María
-(3, 'jorge.espinoza@email.com', '$2y$10$e0myZXy9x...hash_simulado_3'), -- Cliente 3: Jorge Luis
-(4, 'claudia.benitez@email.com', '$2y$10$e0myZXy9x...hash_simulado_4'),-- Cliente 4: Claudia
-(5, 'andres.vargas@email.com', '$2y$10$e0myZXy9x...hash_simulado_5');  -- Cliente 5: Andrés
-
-SELECT * FROM usuarios;
+(1, 'carlos.mendoza@email.com', '$2y$10$e0myZXy9x...hash_simulado_1'), /* Cliente 1: Carlos */
+(2, 'ana.gutierrez@email.com', '$2y$10$e0myZXy9x...hash_simulado_2'),  /* Cliente 2: Ana María */
+(3, 'jorge.espinoza@email.com', '$2y$10$e0myZXy9x...hash_simulado_3'), /* Cliente 3: Jorge Luis */
+(4, 'claudia.benitez@email.com', '$2y$10$e0myZXy9x...hash_simulado_4'),/* Cliente 4: Claudia */
+(5, 'andres.vargas@email.com', '$2y$10$e0myZXy9x...hash_simulado_5');  /* Cliente 5: Andrés */
