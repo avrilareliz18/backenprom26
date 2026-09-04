@@ -1,2 +1,32 @@
 ### Consulta de proveedor
 GET http://api.proycompu266/proveedor
+
+### Modificar proveedor
+PUT http://api.proycompu266/proveedor/1
+
+{
+    "ci": "1029384",
+    "nombre": "Roberto",
+    "apellidos": "Gómez Fernández"
+}
+
+### Adicionar proveedor con varios errores
+POST http://api.proycompu266/proveedor
+
+{
+    "ci": "",
+    "nombre": "",
+    "apellidos": ""
+}
+
+### Eliminar proveedor
+DELETE http://api.proycompu266/proveedor/5
+
+### Adicionar proveedor
+POST http://api.proycompu266/proveedor
+
+{
+    "ci": "5647382",
+    "nombre": "Martha Elena",
+    "apellidos": "Salinas Quiroga"
+}

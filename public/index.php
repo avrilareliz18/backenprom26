@@ -19,6 +19,11 @@ $route=new Router();
 //direccion para usuarios
 $route->add('GET','/','UserController@getAll');
 $route->add('GET','/users','UserController@getAll');
+$route->add('GET','/users/{id}','UserController@getAll');
+
+$route->add('POST','/users','UserController@getAll');
+$route->add('PUT','/users/{id}','UserController@getAll');
+$route->add('DELETE','/users/{id}','UserController@getAll');
 
 //direccion de productos
 $route->add('GET','/productos','ProductoController@getAll'); 

@@ -1,2 +1,29 @@
 ### Consulta de proveedor_producto
 GET http://api.proycompu266/proveedor_producto
+
+### Modificar proveedor_producto
+PUT http://api.proycompu266/proveedor_producto/1
+
+{
+    "cod_proveedor": 1,
+    "cod_producto": 4
+}
+
+### Adicionar proveedor_producto con varios errores
+POST http://api.proycompu266/proveedor_producto
+
+{
+    "cod_proveedor": 0,
+    "cod_producto": ""
+}
+
+### Eliminar proveedor_producto
+DELETE http://api.proycompu266/proveedor_producto/5
+
+### Adicionar proveedor_producto
+POST http://api.proycompu266/proveedor_producto
+
+{
+    "cod_proveedor": 2,
+    "cod_producto": 2
+}

@@ -1,2 +1,33 @@
 ### Consulta de usuario
-GET http://api.proycompu266/
+GET http://api.proycompu266/users
+
+### Modificar usuario
+PUT http://api.proycompu266/usuario/1
+
+{
+    "cod_cliente": 1,
+    "email": "carlos.mendoza@email.com",
+    "password_hash": "$2y$10$e0myZXy9xh4...hash_simulado",
+    "estado_cuenta": "Activo"
+}
+
+### Adicionar usuario con varios errores
+POST http://api.proycompu266/usuario
+
+{
+    "cod_cliente": "",
+    "email": "correo_invalido",
+    "password_hash": ""
+}
+
+### Eliminar usuario
+DELETE http://api.proycompu266/usuario/5
+
+### Adicionar usuario
+POST http://api.proycompu266/usuario
+
+{
+    "cod_cliente": 2,
+    "email": "ana.gutierrez@email.com",
+    "password_hash": "$2y$10$e0myZXy9xh4...hash_simulado"
+}

@@ -1,2 +1,38 @@
 ### Consulta de pedido_producto
 GET http://api.proycompu266/pedido_producto
+
+### Modificar pedido_producto
+PUT http://api.proycompu266/pedido_producto/1
+
+{
+    "cod_pedido": 1,
+    "cod_producto": 1,
+    "cantidad": 2,
+    "precio_unitario": 6800.00,
+    "descuento": 100.00
+}
+
+### Adicionar pedido_producto con varios errores
+POST http://api.proycompu266/pedido_producto
+
+{
+    "cod_pedido": "",
+    "cod_producto": "",
+    "cantidad": 0,
+    "precio_unitario": -10,
+    "descuento": -5
+}
+
+### Eliminar pedido_producto
+DELETE http://api.proycompu266/pedido_producto/5
+
+### Adicionar pedido_producto
+POST http://api.proycompu266/pedido_producto
+
+{
+    "cod_pedido": 1,
+    "cod_producto": 4,
+    "cantidad": 2,
+    "precio_unitario": 580.00,
+    "descuento": 0.00
+}

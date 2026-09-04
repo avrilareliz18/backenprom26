@@ -1,2 +1,31 @@
 ### Consulta de pedido
 GET http://api.proycompu266/pedido
+
+### Modificar pedido
+PUT http://api.proycompu266/pedido/1
+
+{
+    "cod_cliente": 1,
+    "fecha": "2026-05-20 14:15:00",
+    "estado": "Procesando"
+}
+
+### Adicionar pedido con varios errores
+POST http://api.proycompu266/pedido
+
+{
+    "cod_cliente": "",
+    "fecha": "",
+    "estado": ""
+}
+
+### Eliminar pedido
+DELETE http://api.proycompu266/pedido/5
+
+### Adicionar pedido
+POST http://api.proycompu266/pedido
+
+{
+    "cod_cliente": 4,
+    "estado": "Pendiente"
+}

@@ -1,2 +1,39 @@
 ### Consulta de cliente
 GET http://api.proycompu266/clientes
+### Modificar Productos
+
+PUT http://proycompu266/productos/1
+
+{
+    "id":2,
+    "ci":"9521478",
+    "nombre":"Ana María",
+    "apellido":Gutiérrez Rojas,
+    "direccion":Calle Murillo #12 Christie,
+    "telefono":65098712
+}
+
+### Adicionar producto con varios errores
+POST http://proycompu266/cliente
+
+{
+    "id": ,
+    "ci": ",
+    "nombre":" ",
+    "apellido": ,
+    "direccion": ,
+    "telefono": 
+}
+
+### Eliminar producto
+DELETE http://proycompu266/productos/20
+
+### Adicionar producto
+POST http://proycompu266/productos
+
+{
+    "codBarras":"7501001300329",
+    "descripcion":"Inalámbrico ",
+    "stock":59,
+    "precio_unitario":22.53
+}
