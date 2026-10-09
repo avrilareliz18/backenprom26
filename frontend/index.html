@@ -172,6 +172,14 @@
         <h2 id="modalTitle"></h2>
         <strong id="modalPrice"></strong>
         <p id="modalDescription"></p>
+        <div class="modal-quantity">
+            <span>Cantidad</span>
+            <div class="quantity-control">
+                <button class="quantity-btn" type="button" id="qtyMinus" aria-label="Quitar una unidad">-</button>
+                <span class="quantity-value" id="qtyValue">1</span>
+                <button class="quantity-btn" type="button" id="qtyPlus" aria-label="Agregar una unidad">+</button>
+            </div>
+        </div>
         <a class="primary-button" href="#pago">Comprar esta computadora</a>
     </dialog>
 
@@ -182,6 +190,17 @@
         const modalTitle = document.getElementById('modalTitle');
         const modalPrice = document.getElementById('modalPrice');
         const modalDescription = document.getElementById('modalDescription');
+        const qtyValue = document.getElementById('qtyValue');
+        const qtyMinus = document.getElementById('qtyMinus');
+        const qtyPlus = document.getElementById('qtyPlus');
+
+        qtyMinus.addEventListener('click', () => {
+            qtyValue.textContent = Math.max(1, parseInt(qtyValue.textContent, 10) - 1);
+        });
+
+        qtyPlus.addEventListener('click', () => {
+            qtyValue.textContent = parseInt(qtyValue.textContent, 10) + 1;
+        });
 
         searchInput.addEventListener('input', () => {
             const value = searchInput.value.toLowerCase().trim();
@@ -196,6 +215,7 @@
                 modalTitle.textContent = card.dataset.name;
                 modalPrice.textContent = card.dataset.price;
                 modalDescription.textContent = card.dataset.description;
+                qtyValue.textContent = '1';
                 modal.showModal();
             });
         });
