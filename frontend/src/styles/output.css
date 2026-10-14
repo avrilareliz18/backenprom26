@@ -460,14 +460,12 @@ body {
   background: #edf2f4;
   cursor: pointer;
 }
-.modal-quantity {
+.modal-actions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 22px;
-  color: var(--muted);
-  font-weight: 800;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 0;
 }
 .quantity-control {
   display: inline-flex;

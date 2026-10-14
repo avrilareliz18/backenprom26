@@ -1,4 +1,4 @@
-<?php
+ e<?php
 require_once "../src/Models/Pedidos.php";
 class PedidoController{
     public function getAll()

@@ -354,6 +354,46 @@ body {
   cursor: pointer;
 }
 
+.modal-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 0;
+}
+
+.quantity-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-btn {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--brand-dark);
+  background: var(--soft);
+  font-size: 1.25rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.quantity-btn:hover {
+  background: #e6f4f1;
+  transform: translateY(-2px);
+}
+
+.quantity-value {
+  min-width: 40px;
+  text-align: center;
+  color: var(--ink);
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
 @media (max-width: 980px) {
   .topbar,
   .section-heading {
